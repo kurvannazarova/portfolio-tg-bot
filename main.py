@@ -5,7 +5,7 @@ import telebot
 
 # load_dotenv()
 
-BOT_TOKEN = 8930768015:AAEjPp0oOmDIxSR1r5KVfQrii-aTnAg9ZT4
+BOT_TOKEN = "8930768015:AAEjPp0oOmDIxSR1r5KVfQrii-aTnAg9ZT4"
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode=None)
 
 @bot.message_handler(commands=['start', 'help'])
