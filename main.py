@@ -28,7 +28,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: message.text == "About me")
 def aboutme_handler(message):
-	bot.send_message(message.chat.id, "Hi everyone! I'm Dilmira Kurvannazarova. \n I'm a student studying at IT Park, and I'm 15 years old. \n I live in Shovot, Khorezm, where I pursue my passion for learning and creativity. \n My hobbies include listening to music, reading books, and writing stories. These activities fuel my imagination and help me express myself creatively. I'm deeply interested in literature, my mother tongue, English, and history. \n These subjects inspire me to explore different perspectives and understand the world around me.")
+	bot.send_message(message.chat.id, "Hi everyone! I'm Dilmira Kurvannazarova\n'm a student studying at IT Park, and I'm 15 years old.\nI live in Shovot, Khorezm, where I pursue my passion for learning and creativity.\nMy hobbies include listening to music, reading books, and writing stories. These activities fuel my imagination and help me express myself creatively. I'm deeply interested in literature, my mother tongue, English, and history.\nThese subjects inspire me to explore different perspectives and understand the world around me.")
       
 
 @bot.message_handler(func=lambda message: message.text == "Contact")
