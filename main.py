@@ -41,6 +41,12 @@ def contact_handler(message):
     btn1 = types.KeyboardButton("Telegram", url="https://t.me/gulmira_12_09")
     keyboard.add(btn1)
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
+    
+def aboutme_handler(message):
+    text = (
+        "Will be added soon"
+    )
+    bot.send_message(message.chat.id, text)
 
 bot.infinity_polling()
 
