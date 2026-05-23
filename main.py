@@ -19,11 +19,19 @@ def send_welcome(message):
     keyboard.add(btn1, btn2)
     bot.send_message(message.chat.id, text, reply_markup = keyboard )
 	
-@bot.message_handler(func=lambda m: True)
-def echo_all(message):
-	if message.text =="Abut me":
-		bot.send_message(message.chat.id, "Men Kurvannazarova Dilmira...")
-	elif message.text == "Contact":
-		bot.send_message(message.chat.id, "Tez orada qo'shiladi😁")
-	
+# @bot.message_handler(func=lambda m: True)
+# def echo_all(message):
+# 	if message.text =="About me":
+# 		bot.send_message(message.chat.id, "Men Kurvannazarova Dilmira...")
+# 	elif message.text == "Contact":
+# 		bot.send_message(message.chat.id, "Tez orada qo'shiladi😁")
+
+@bot.message_handler(func=lambda message: message.text == "About me")
+def aboutme_handler(message):
+	bot.send_message(message.chat.id, "Men Kurvannazarova Dilmira...")
+      
+@bot.message_handler(func=lambda message: message.text == "About me")
+def contact_handler(message):
+	bot.send_message(message.chat.id, "Tez orada qo'shiladi😁")
+
 bot.infinity_polling()
