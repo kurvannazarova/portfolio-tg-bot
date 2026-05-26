@@ -42,7 +42,12 @@ def contact_handler(message):
 @bot.message_handler(func=lambda message: message.text == "Skills")
 def skills_handler(message):
     text = (
-        "Will be added soon"
+        "📚 Literature\n"
+        "Deep appreciation of literature, along with the ability to understand, analyze, and critique literary works.\n"
+        "📖 History\n"
+        "Strong knowledge of historical events and their cultural and social significance.\n"
+        "✍️ Creative Writing\n"
+        "Crafting original stories and expressing ideas clearly and creatively through the written word."
     )
     bot.send_message(message.chat.id, text)
 
@@ -51,6 +56,7 @@ def projects_handler(message):
     text = (
         "My projects \n"
         "From cryllic to latin, from latin to cryllic bot [Bot link](@LotinKrilSimpleBot )\n"
+        "Medical assistance website [Website link](medical-assistance-self.vercel.app)"
     )
     bot.send_message(message.chat.id, text)
 
