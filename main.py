@@ -23,14 +23,11 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: message.text == "About me")
 def aboutme_handler(message):
     text = (
-        "About me\n"
-        "Hi everyone! I'm Dilmira Kurvannazarova.\n"
-        "I'm a student studying at IT Park, and I'm 15 years old.\n"
-        "I live in Shovot, Khorezm, where I pursue my passion for learning and creativity.\n"
-        "My hobbies include listening to music, reading books, and writing stories. "
-        "These activities fuel my imagination and help me express myself creatively.\n"
-        "I'm deeply interested in literature, my mother tongue, English, and history. "
-        "These subjects inspire me to explore different perspectives and understand the world around me."
+        "About Me 🌟\n"
+        "Hi everyone! I'm Dilmira Kurvannazarova 👋\n"
+        "I'm a 15-year-old student at IT Park 👩🏻‍💻 and I live in Shovot, Khorezm 🌍.\n"
+        "I love learning and being creative ✨. My hobbies are listening to music 🎧, reading books 📚, and writing stories ✍️.\n"
+        "I'm interested in literature, languages (especially English), and history 📖 — they help me see the world in a deeper way 🌎."
     )
     bot.send_message(message.chat.id, text)
 
@@ -42,9 +39,18 @@ def contact_handler(message):
     keyboard.add(btn1)
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
     
-def aboutme_handler(message):
+@bot.message_handler(func=lambda message: message.text == "Skills")
+def skills_handler(message):
     text = (
         "Will be added soon"
+    )
+    bot.send_message(message.chat.id, text)
+
+@bot.message_handler(func=lambda message: message.text == "Projects")
+def projects_handler(message):
+    text = (
+        "My projects \n"
+        "From cryllic to latin, from latin to cryllic bot [Bot link](@LotinKrilSimpleBot )\n"
     )
     bot.send_message(message.chat.id, text)
 
