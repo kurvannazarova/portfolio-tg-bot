@@ -11,7 +11,7 @@ bot = telebot.TeleBot(BOT_TOKEN, parse_mode=None)
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     text = "Good day👋🏻, welcome to my bot! I am Kurvannazarova Dilmira, a small frontend developer👩🏻‍💻."
-    keyboard = types.ReplyKeyboardMarkup()
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("About me")
     btn2 = types.KeyboardButton("Contact")
     btn3 = types.KeyboardButton("Skills")
