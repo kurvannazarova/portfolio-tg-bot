@@ -54,9 +54,9 @@ def skills_handler(message):
 @bot.message_handler(func=lambda message: message.text == "Projects")
 def projects_handler(message):
     text = (
-        "My projects \n"
-        "From cryllic to latin, from latin to cryllic bot [Bot link](@LotinKrilSimpleBot )\n"
-        "Medical assistance website [Website link](medical-assistance-self.vercel.app)"
+        "🚀 My Projects \n"
+        "🤖 Cyrillic ↔ Latin Converter Bot \n A Telegram bot that converts text from Cyrillic to Latin script and from Latin back to Cyrillic, making text transformation fast and easy. [Bot link](@LotinKrilSimpleBot )\n"
+        "🏥 Medical Assistance Website \n A user-friendly web platform designed to provide basic medical guidance and assistance information in a simple and accessible way.[Website link](medical-assistance-self.vercel.app)"
     )
     bot.send_message(message.chat.id, text)
 
