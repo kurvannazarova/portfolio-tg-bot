@@ -10,7 +10,7 @@ bot = telebot.TeleBot(BOT_TOKEN, parse_mode=None)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    text = "Assalom alaykum👋🏻, botga xush kelibsiz! Men Kurvannazarova Dilmira kichik frontend dasturchiman👩🏻‍💻."
+    text = "Good day👋🏻, welcome to my bot! I am Kurvannazarova Dilmira, a small frontend developer👩🏻‍💻."
     keyboard = types.ReplyKeyboardMarkup()
     btn1 = types.KeyboardButton("About me")
     btn2 = types.KeyboardButton("Contact")
@@ -37,8 +37,8 @@ def aboutme_handler(message):
 @bot.message_handler(func=lambda message: message.text == "Contact")
 def contact_handler(message):
     text = "Tap to button to contact me"
-    keyboard = types.ReplyKeyboardMarkup()
-    btn1 = types.KeyboardButton("Telegram", url="https://t.me/gulmira_12_09")
+    keyboard = types.InlineKeyboardMarkup()
+    btn1 = types.InlineKeyboardButton("Telegram", url="https://t.me/gulmira_12_09")
     keyboard.add(btn1)
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
     
